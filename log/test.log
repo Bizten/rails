@@ -577,3 +577,170 @@ Processing by PostsController#edit as HTML
   Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3147)
 Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3593)
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "action_text_rich_texts";
+DELETE FROM "comments";
+DELETE FROM "posts";
+INSERT INTO "comments" ("id", "post_id", "content", "created_at", "updated_at") VALUES (980190962, 980190962, 'MyText', '2022-10-18 17:56:37.443405', '2022-10-18 17:56:37.443405');
+INSERT INTO "comments" ("id", "post_id", "content", "created_at", "updated_at") VALUES (298486374, 298486374, 'MyText', '2022-10-18 17:56:37.443405', '2022-10-18 17:56:37.443405');
+INSERT INTO "posts" ("id", "title", "content", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2022-10-18 17:56:37.445650', '2022-10-18 17:56:37.445650');
+INSERT INTO "posts" ("id", "title", "content", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2022-10-18 17:56:37.445650', '2022-10-18 17:56:37.445650')[0m
+  [1m[36mTRANSACTION (90.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+PostsControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/posts" for 127.0.0.1 at 2022-10-18 17:56:37 +0000
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mComment Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 298486374]]
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 298486374], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (Duration: 14.6ms | Allocations: 8637)
+  [1m[36mComment Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 980190962]]
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 980190962], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (Duration: 2.8ms | Allocations: 1112)
+  Rendered posts/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 11239)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 13591)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 1.0ms | Allocations: 15927)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+PostsControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/posts/new" for 127.0.0.1 at 2022-10-18 17:56:37 +0000
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 5.3ms | Allocations: 3050)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3364)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3868)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4272)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+PostsControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/posts/980190962/edit" for 127.0.0.1 at 2022-10-18 17:56:37 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 980190962], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (Duration: 3.1ms | Allocations: 1541)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1822)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2289)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 2913)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+PostsControllerTest: test_should_create_post
+--------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mPost Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 980190962], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+Started POST "/posts" for 127.0.0.1 at 2022-10-18 17:56:37 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"content"=>"", "title"=>"MyString"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "MyString"], ["content", nil], ["created_at", "2022-10-18 17:56:37.647052"], ["updated_at", "2022-10-18 17:56:37.647052"]]
+  [1m[36mActionText::RichText Create (0.2ms)[0m  [1m[32mINSERT INTO "action_text_rich_texts" ("name", "body", "record_type", "record_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "content"], ["body", ""], ["record_type", "Post"], ["record_id", 980190963], ["created_at", "2022-10-18 17:56:37.651936"], ["updated_at", "2022-10-18 17:56:37.651936"]]
+  [1m[36mPost Update (0.1ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = ? WHERE "posts"."id" = ?[0m  [["updated_at", "2022-10-18 17:56:37.653333"], ["id", 980190963]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/980190963
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms | Allocations: 4660)
+  [1m[36mPost Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+PostsControllerTest: test_should_show_post
+------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/posts/980190962" for 127.0.0.1 at 2022-10-18 17:56:37 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 980190962]]
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 980190962], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (Duration: 3.0ms | Allocations: 1144)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 980190962]]
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 1.1ms | Allocations: 365)
+  Rendered comments/_new.html.erb (Duration: 1.7ms | Allocations: 773)
+  Rendered posts/_comments.html.erb (Duration: 8.4ms | Allocations: 3965)
+  Rendered posts/show.html.erb within layouts/application (Duration: 14.4ms | Allocations: 6364)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6858)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.4ms | Allocations: 7376)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+PostsControllerTest: test_should_update_post
+--------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 980190962], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+Started PATCH "/posts/980190962" for 127.0.0.1 at 2022-10-18 17:56:37 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"", "title"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCACHE ActionText::RichText Load (0.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 980190962], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActionText::RichText Create (0.2ms)[0m  [1m[32mINSERT INTO "action_text_rich_texts" ("name", "body", "record_type", "record_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "content"], ["body", ""], ["record_type", "Post"], ["record_id", 980190962], ["created_at", "2022-10-18 17:56:37.689502"], ["updated_at", "2022-10-18 17:56:37.689502"]]
+  [1m[36mPost Update (0.1ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = ? WHERE "posts"."id" = ?[0m  [["updated_at", "2022-10-18 17:56:37.690709"], ["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/980190962
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms | Allocations: 2138)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+PostsControllerTest: test_should_destroy_post
+---------------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mPost Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+Started DELETE "/posts/980190962" for 127.0.0.1 at 2022-10-18 17:56:37 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActionText::RichText Load (0.0ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 980190962], ["record_type", "Post"], ["name", "content"], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 980190962]]
+  [1m[36mComment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mPost Destroy (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActionCable] Broadcasting to Z2lkOi8vYmxvZy9Qb3N0Lzk4MDE5MDk2Mg: "<turbo-stream action=\"remove\" target=\"comment_980190962\"></turbo-stream>"
+Redirected to http://www.example.com/posts
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 2894)
+  [1m[36mPost Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+CommentsMailerTest: test_submitted
+----------------------------------
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering comments_mailer/submitted.html.erb within layouts/mailer
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (Duration: 0.8ms | Allocations: 329)
+  Rendered comments_mailer/submitted.html.erb within layouts/mailer (Duration: 3.0ms | Allocations: 1278)
+  Rendered layout layouts/mailer.html.erb (Duration: 3.5ms | Allocations: 1451)
+  Rendering layout layouts/mailer.text.erb
+  Rendering comments_mailer/submitted.text.erb within layouts/mailer
+  Rendered comments_mailer/submitted.text.erb within layouts/mailer (Duration: 0.3ms | Allocations: 126)
+  Rendered layout layouts/mailer.text.erb (Duration: 0.6ms | Allocations: 273)
+CommentsMailer#submitted: processed outbound mail in 32.4ms
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m

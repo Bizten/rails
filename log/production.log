@@ -1,0 +1,147 @@
+W, [2022-10-18T15:17:08.655421 #96306]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-18T15:17:27.031849 #96306]  INFO -- : [ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d] Started GET "/posts" for 176.129.104.228 at 2022-10-18 15:17:27 +0000
+I, [2022-10-18T15:17:27.033349 #96306]  INFO -- : [ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d] Processing by PostsController#index as HTML
+I, [2022-10-18T15:17:27.048069 #96306]  INFO -- : [ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]   Rendered posts/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1814)
+I, [2022-10-18T15:17:27.048155 #96306]  INFO -- : [ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]   Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 1878)
+I, [2022-10-18T15:17:27.048376 #96306]  INFO -- : [ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d] Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.3ms | Allocations: 3450)
+F, [2022-10-18T15:17:27.049391 #96306] FATAL -- : [ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]   
+[ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d] ActionView::Template::Error (SQLite3::SQLException: no such table: posts):
+[ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]     3: <h1>Posts</h1>
+[ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]     4: 
+[ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]     5: <div id="posts">
+[ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]     6:   <% @posts.each do |post| %>
+[ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]     7:     <%= render post %>
+[ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]     8:     <p>
+[ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]     9:       <%= link_to "Show this post", post %>
+[ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d]   
+[ae77d8d9-9a4b-4c15-811e-70cbddb3cf1d] app/views/posts/index.html.erb:6
+I, [2022-10-18T16:24:20.189552 #103535]  INFO -- : [b8599ae2-a219-4d49-87ec-2175a7ef06cb] Started GET "/posts" for 176.129.104.228 at 2022-10-18 16:24:20 +0000
+I, [2022-10-18T16:24:20.191226 #103535]  INFO -- : [b8599ae2-a219-4d49-87ec-2175a7ef06cb] Processing by PostsController#index as HTML
+I, [2022-10-18T16:24:20.203330 #103535]  INFO -- : [b8599ae2-a219-4d49-87ec-2175a7ef06cb]   Rendered posts/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1921)
+I, [2022-10-18T16:24:20.203437 #103535]  INFO -- : [b8599ae2-a219-4d49-87ec-2175a7ef06cb]   Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 1988)
+I, [2022-10-18T16:24:20.203710 #103535]  INFO -- : [b8599ae2-a219-4d49-87ec-2175a7ef06cb] Completed 500 Internal Server Error in 12ms (Allocations: 3507)
+F, [2022-10-18T16:24:20.204611 #103535] FATAL -- : [b8599ae2-a219-4d49-87ec-2175a7ef06cb]   
+[b8599ae2-a219-4d49-87ec-2175a7ef06cb] ActionView::Template::Error (There is an issue connecting to your database with your username/password, username: rails.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+[b8599ae2-a219-4d49-87ec-2175a7ef06cb]     3: <h1>Posts</h1>
+[b8599ae2-a219-4d49-87ec-2175a7ef06cb]     4: 
+[b8599ae2-a219-4d49-87ec-2175a7ef06cb]     5: <div id="posts">
+[b8599ae2-a219-4d49-87ec-2175a7ef06cb]     6:   <% @posts.each do |post| %>
+[b8599ae2-a219-4d49-87ec-2175a7ef06cb]     7:     <%= render post %>
+[b8599ae2-a219-4d49-87ec-2175a7ef06cb]     8:     <p>
+[b8599ae2-a219-4d49-87ec-2175a7ef06cb]     9:       <%= link_to "Show this post", post %>
+[b8599ae2-a219-4d49-87ec-2175a7ef06cb]   
+[b8599ae2-a219-4d49-87ec-2175a7ef06cb] app/views/posts/index.html.erb:6
+I, [2022-10-18T16:31:08.777064 #103767]  INFO -- : [2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8] Started GET "/posts" for 176.129.104.228 at 2022-10-18 16:31:08 +0000
+I, [2022-10-18T16:31:08.778385 #103767]  INFO -- : [2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8] Processing by PostsController#index as HTML
+I, [2022-10-18T16:31:08.789625 #103767]  INFO -- : [2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]   Rendered posts/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1922)
+I, [2022-10-18T16:31:08.789705 #103767]  INFO -- : [2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]   Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 1989)
+I, [2022-10-18T16:31:08.789880 #103767]  INFO -- : [2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8] Completed 500 Internal Server Error in 11ms (Allocations: 3508)
+F, [2022-10-18T16:31:08.790714 #103767] FATAL -- : [2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]   
+[2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8] ActionView::Template::Error (We could not find your database: rails_production. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+[2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]     3: <h1>Posts</h1>
+[2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]     4: 
+[2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]     5: <div id="posts">
+[2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]     6:   <% @posts.each do |post| %>
+[2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]     7:     <%= render post %>
+[2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]     8:     <p>
+[2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]     9:       <%= link_to "Show this post", post %>
+[2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8]   
+[2a9ecf8c-2823-4c04-bcd9-bdd6fc18cfc8] app/views/posts/index.html.erb:6
+I, [2022-10-18T16:33:15.014964 #103832]  INFO -- : [c38304e2-287b-4317-91c8-5a4b16e4cd2c] Started GET "/posts" for 176.129.104.228 at 2022-10-18 16:33:15 +0000
+I, [2022-10-18T16:33:15.016646 #103832]  INFO -- : [c38304e2-287b-4317-91c8-5a4b16e4cd2c] Processing by PostsController#index as HTML
+I, [2022-10-18T16:33:15.038901 #103832]  INFO -- : [c38304e2-287b-4317-91c8-5a4b16e4cd2c]   Rendered posts/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 4787)
+I, [2022-10-18T16:33:15.040429 #103832]  INFO -- : [c38304e2-287b-4317-91c8-5a4b16e4cd2c]   Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5514)
+I, [2022-10-18T16:33:15.040657 #103832]  INFO -- : [c38304e2-287b-4317-91c8-5a4b16e4cd2c] Completed 500 Internal Server Error in 24ms (ActiveRecord: 4.9ms | Allocations: 7037)
+F, [2022-10-18T16:33:15.041345 #103832] FATAL -- : [c38304e2-287b-4317-91c8-5a4b16e4cd2c]   
+[c38304e2-287b-4317-91c8-5a4b16e4cd2c] ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
+):
+[c38304e2-287b-4317-91c8-5a4b16e4cd2c]      6:     <%= csrf_meta_tags %>
+[c38304e2-287b-4317-91c8-5a4b16e4cd2c]      7:     <%= csp_meta_tag %>
+[c38304e2-287b-4317-91c8-5a4b16e4cd2c]      8: 
+[c38304e2-287b-4317-91c8-5a4b16e4cd2c]      9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+[c38304e2-287b-4317-91c8-5a4b16e4cd2c]     10:     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+[c38304e2-287b-4317-91c8-5a4b16e4cd2c]     11:     <%= javascript_importmap_tags %>
+[c38304e2-287b-4317-91c8-5a4b16e4cd2c]     12:   </head>
+[c38304e2-287b-4317-91c8-5a4b16e4cd2c]   
+[c38304e2-287b-4317-91c8-5a4b16e4cd2c] app/views/layouts/application.html.erb:9
+I, [2022-10-18T16:33:16.191367 #103832]  INFO -- : [0c5c378c-25aa-45fe-ac9b-0911a5f27f15] Started GET "/posts" for 176.129.104.228 at 2022-10-18 16:33:16 +0000
+I, [2022-10-18T16:33:16.192357 #103832]  INFO -- : [0c5c378c-25aa-45fe-ac9b-0911a5f27f15] Processing by PostsController#index as HTML
+I, [2022-10-18T16:33:16.194288 #103832]  INFO -- : [0c5c378c-25aa-45fe-ac9b-0911a5f27f15]   Rendered posts/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 254)
+I, [2022-10-18T16:33:16.194940 #103832]  INFO -- : [0c5c378c-25aa-45fe-ac9b-0911a5f27f15]   Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 545)
+I, [2022-10-18T16:33:16.195132 #103832]  INFO -- : [0c5c378c-25aa-45fe-ac9b-0911a5f27f15] Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 786)
+F, [2022-10-18T16:33:16.195813 #103832] FATAL -- : [0c5c378c-25aa-45fe-ac9b-0911a5f27f15]   
+[0c5c378c-25aa-45fe-ac9b-0911a5f27f15] ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
+):
+[0c5c378c-25aa-45fe-ac9b-0911a5f27f15]      6:     <%= csrf_meta_tags %>
+[0c5c378c-25aa-45fe-ac9b-0911a5f27f15]      7:     <%= csp_meta_tag %>
+[0c5c378c-25aa-45fe-ac9b-0911a5f27f15]      8: 
+[0c5c378c-25aa-45fe-ac9b-0911a5f27f15]      9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+[0c5c378c-25aa-45fe-ac9b-0911a5f27f15]     10:     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+[0c5c378c-25aa-45fe-ac9b-0911a5f27f15]     11:     <%= javascript_importmap_tags %>
+[0c5c378c-25aa-45fe-ac9b-0911a5f27f15]     12:   </head>
+[0c5c378c-25aa-45fe-ac9b-0911a5f27f15]   
+[0c5c378c-25aa-45fe-ac9b-0911a5f27f15] app/views/layouts/application.html.erb:9
+I, [2022-10-18T17:14:08.716979 #109349]  INFO -- : [fc0a550e-7030-4ce6-b6f5-cd772c46916c] Started GET "/posts" for 176.129.104.228 at 2022-10-18 17:14:08 +0000
+I, [2022-10-18T17:14:08.720170 #109349]  INFO -- : [fc0a550e-7030-4ce6-b6f5-cd772c46916c] Processing by PostsController#index as HTML
+I, [2022-10-18T17:14:08.739134 #109349]  INFO -- : [fc0a550e-7030-4ce6-b6f5-cd772c46916c]   Rendered posts/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 4787)
+I, [2022-10-18T17:14:08.740636 #109349]  INFO -- : [fc0a550e-7030-4ce6-b6f5-cd772c46916c]   Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 5514)
+I, [2022-10-18T17:14:08.740891 #109349]  INFO -- : [fc0a550e-7030-4ce6-b6f5-cd772c46916c] Completed 500 Internal Server Error in 21ms (ActiveRecord: 4.7ms | Allocations: 7037)
+F, [2022-10-18T17:14:08.741598 #109349] FATAL -- : [fc0a550e-7030-4ce6-b6f5-cd772c46916c]   
+[fc0a550e-7030-4ce6-b6f5-cd772c46916c] ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
+):
+[fc0a550e-7030-4ce6-b6f5-cd772c46916c]      6:     <%= csrf_meta_tags %>
+[fc0a550e-7030-4ce6-b6f5-cd772c46916c]      7:     <%= csp_meta_tag %>
+[fc0a550e-7030-4ce6-b6f5-cd772c46916c]      8: 
+[fc0a550e-7030-4ce6-b6f5-cd772c46916c]      9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+[fc0a550e-7030-4ce6-b6f5-cd772c46916c]     10:     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+[fc0a550e-7030-4ce6-b6f5-cd772c46916c]     11:     <%= javascript_importmap_tags %>
+[fc0a550e-7030-4ce6-b6f5-cd772c46916c]     12:   </head>
+[fc0a550e-7030-4ce6-b6f5-cd772c46916c]   
+[fc0a550e-7030-4ce6-b6f5-cd772c46916c] app/views/layouts/application.html.erb:9
+I, [2022-10-18T17:14:09.571589 #109349]  INFO -- : [eac4be3b-f2dd-4708-8bd5-2ad0e6b39126] Started GET "/posts" for 176.129.104.228 at 2022-10-18 17:14:09 +0000
+I, [2022-10-18T17:14:09.572369 #109349]  INFO -- : [eac4be3b-f2dd-4708-8bd5-2ad0e6b39126] Processing by PostsController#index as HTML
+I, [2022-10-18T17:14:09.574164 #109349]  INFO -- : [eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]   Rendered posts/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 254)
+I, [2022-10-18T17:14:09.574784 #109349]  INFO -- : [eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]   Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 545)
+I, [2022-10-18T17:14:09.574915 #109349]  INFO -- : [eac4be3b-f2dd-4708-8bd5-2ad0e6b39126] Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 786)
+F, [2022-10-18T17:14:09.575508 #109349] FATAL -- : [eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]   
+[eac4be3b-f2dd-4708-8bd5-2ad0e6b39126] ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
+):
+[eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]      6:     <%= csrf_meta_tags %>
+[eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]      7:     <%= csp_meta_tag %>
+[eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]      8: 
+[eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]      9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+[eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]     10:     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+[eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]     11:     <%= javascript_importmap_tags %>
+[eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]     12:   </head>
+[eac4be3b-f2dd-4708-8bd5-2ad0e6b39126]   
+[eac4be3b-f2dd-4708-8bd5-2ad0e6b39126] app/views/layouts/application.html.erb:9
+W, [2022-10-18T17:56:45.992274 #110257]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-18T17:56:54.620090 #110257]  INFO -- : [43f74caa-0932-4038-a73c-c8910667cfc0] Started GET "/posts" for 176.129.104.228 at 2022-10-18 17:56:54 +0000
+I, [2022-10-18T17:56:54.621471 #110257]  INFO -- : [43f74caa-0932-4038-a73c-c8910667cfc0] Processing by PostsController#index as HTML
+I, [2022-10-18T17:56:54.634228 #110257]  INFO -- : [43f74caa-0932-4038-a73c-c8910667cfc0]   Rendered posts/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1813)
+I, [2022-10-18T17:56:54.634384 #110257]  INFO -- : [43f74caa-0932-4038-a73c-c8910667cfc0]   Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 1877)
+I, [2022-10-18T17:56:54.634791 #110257]  INFO -- : [43f74caa-0932-4038-a73c-c8910667cfc0] Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.2ms | Allocations: 3405)
+F, [2022-10-18T17:56:54.636446 #110257] FATAL -- : [43f74caa-0932-4038-a73c-c8910667cfc0]   
+[43f74caa-0932-4038-a73c-c8910667cfc0] ActionView::Template::Error (SQLite3::SQLException: no such table: posts):
+[43f74caa-0932-4038-a73c-c8910667cfc0]     3: <h1>Posts</h1>
+[43f74caa-0932-4038-a73c-c8910667cfc0]     4: 
+[43f74caa-0932-4038-a73c-c8910667cfc0]     5: <div id="posts">
+[43f74caa-0932-4038-a73c-c8910667cfc0]     6:   <% @posts.each do |post| %>
+[43f74caa-0932-4038-a73c-c8910667cfc0]     7:     <%= render post %>
+[43f74caa-0932-4038-a73c-c8910667cfc0]     8:     <p>
+[43f74caa-0932-4038-a73c-c8910667cfc0]     9:       <%= link_to "Show this post", post %>
+[43f74caa-0932-4038-a73c-c8910667cfc0]   
+[43f74caa-0932-4038-a73c-c8910667cfc0] app/views/posts/index.html.erb:6
