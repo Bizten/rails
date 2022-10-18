@@ -145,3 +145,329 @@ F, [2022-10-18T17:56:54.636446 #110257] FATAL -- : [43f74caa-0932-4038-a73c-c891
 [43f74caa-0932-4038-a73c-c8910667cfc0]     9:       <%= link_to "Show this post", post %>
 [43f74caa-0932-4038-a73c-c8910667cfc0]   
 [43f74caa-0932-4038-a73c-c8910667cfc0] app/views/posts/index.html.erb:6
+W, [2022-10-18T18:14:02.348079 #110842]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-18T18:14:07.297896 #110842]  INFO -- : [f150252c-5cf2-46fe-a891-326910019a7a] Started GET "/posts" for 176.129.104.228 at 2022-10-18 18:14:07 +0000
+I, [2022-10-18T18:14:07.301199 #110842]  INFO -- : [f150252c-5cf2-46fe-a891-326910019a7a] Processing by PostsController#index as HTML
+I, [2022-10-18T18:14:07.310765 #110842]  INFO -- : [f150252c-5cf2-46fe-a891-326910019a7a]   Rendered posts/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1813)
+I, [2022-10-18T18:14:07.310859 #110842]  INFO -- : [f150252c-5cf2-46fe-a891-326910019a7a]   Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1877)
+I, [2022-10-18T18:14:07.311066 #110842]  INFO -- : [f150252c-5cf2-46fe-a891-326910019a7a] Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 3405)
+F, [2022-10-18T18:14:07.312583 #110842] FATAL -- : [f150252c-5cf2-46fe-a891-326910019a7a]   
+[f150252c-5cf2-46fe-a891-326910019a7a] ActionView::Template::Error (SQLite3::SQLException: no such table: posts):
+[f150252c-5cf2-46fe-a891-326910019a7a]     3: <h1>Posts</h1>
+[f150252c-5cf2-46fe-a891-326910019a7a]     4: 
+[f150252c-5cf2-46fe-a891-326910019a7a]     5: <div id="posts">
+[f150252c-5cf2-46fe-a891-326910019a7a]     6:   <% @posts.each do |post| %>
+[f150252c-5cf2-46fe-a891-326910019a7a]     7:     <%= render post %>
+[f150252c-5cf2-46fe-a891-326910019a7a]     8:     <p>
+[f150252c-5cf2-46fe-a891-326910019a7a]     9:       <%= link_to "Show this post", post %>
+[f150252c-5cf2-46fe-a891-326910019a7a]   
+[f150252c-5cf2-46fe-a891-326910019a7a] app/views/posts/index.html.erb:6
+W, [2022-10-18T18:39:56.744698 #136255]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-18T18:40:08.492725 #136255]  INFO -- : [c4c52928-a183-48e9-a4dd-3111aaaabe07] Started GET "/posts" for 176.129.104.228 at 2022-10-18 18:40:08 +0000
+I, [2022-10-18T18:40:08.494479 #136255]  INFO -- : [c4c52928-a183-48e9-a4dd-3111aaaabe07] Processing by PostsController#index as HTML
+I, [2022-10-18T18:40:08.508958 #136255]  INFO -- : [c4c52928-a183-48e9-a4dd-3111aaaabe07]   Rendered posts/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1813)
+I, [2022-10-18T18:40:08.509059 #136255]  INFO -- : [c4c52928-a183-48e9-a4dd-3111aaaabe07]   Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 1877)
+I, [2022-10-18T18:40:08.509365 #136255]  INFO -- : [c4c52928-a183-48e9-a4dd-3111aaaabe07] Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.1ms | Allocations: 3405)
+F, [2022-10-18T18:40:08.510275 #136255] FATAL -- : [c4c52928-a183-48e9-a4dd-3111aaaabe07]   
+[c4c52928-a183-48e9-a4dd-3111aaaabe07] ActionView::Template::Error (SQLite3::SQLException: no such table: posts):
+[c4c52928-a183-48e9-a4dd-3111aaaabe07]     3: <h1>Posts</h1>
+[c4c52928-a183-48e9-a4dd-3111aaaabe07]     4: 
+[c4c52928-a183-48e9-a4dd-3111aaaabe07]     5: <div id="posts">
+[c4c52928-a183-48e9-a4dd-3111aaaabe07]     6:   <% @posts.each do |post| %>
+[c4c52928-a183-48e9-a4dd-3111aaaabe07]     7:     <%= render post %>
+[c4c52928-a183-48e9-a4dd-3111aaaabe07]     8:     <p>
+[c4c52928-a183-48e9-a4dd-3111aaaabe07]     9:       <%= link_to "Show this post", post %>
+[c4c52928-a183-48e9-a4dd-3111aaaabe07]   
+[c4c52928-a183-48e9-a4dd-3111aaaabe07] app/views/posts/index.html.erb:6
+W, [2022-10-18T18:43:20.710516 #136352]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-18T18:43:24.084648 #136352]  INFO -- : [fbe45877-9bbc-4618-8de0-a5b82590f9bd] Started GET "/posts" for 176.129.104.228 at 2022-10-18 18:43:24 +0000
+I, [2022-10-18T18:43:24.086131 #136352]  INFO -- : [fbe45877-9bbc-4618-8de0-a5b82590f9bd] Processing by PostsController#index as HTML
+I, [2022-10-18T18:43:24.097373 #136352]  INFO -- : [fbe45877-9bbc-4618-8de0-a5b82590f9bd]   Rendered posts/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1813)
+I, [2022-10-18T18:43:24.097512 #136352]  INFO -- : [fbe45877-9bbc-4618-8de0-a5b82590f9bd]   Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1877)
+I, [2022-10-18T18:43:24.097831 #136352]  INFO -- : [fbe45877-9bbc-4618-8de0-a5b82590f9bd] Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.6ms | Allocations: 3405)
+F, [2022-10-18T18:43:24.099248 #136352] FATAL -- : [fbe45877-9bbc-4618-8de0-a5b82590f9bd]   
+[fbe45877-9bbc-4618-8de0-a5b82590f9bd] ActionView::Template::Error (SQLite3::SQLException: no such table: posts):
+[fbe45877-9bbc-4618-8de0-a5b82590f9bd]     3: <h1>Posts</h1>
+[fbe45877-9bbc-4618-8de0-a5b82590f9bd]     4: 
+[fbe45877-9bbc-4618-8de0-a5b82590f9bd]     5: <div id="posts">
+[fbe45877-9bbc-4618-8de0-a5b82590f9bd]     6:   <% @posts.each do |post| %>
+[fbe45877-9bbc-4618-8de0-a5b82590f9bd]     7:     <%= render post %>
+[fbe45877-9bbc-4618-8de0-a5b82590f9bd]     8:     <p>
+[fbe45877-9bbc-4618-8de0-a5b82590f9bd]     9:       <%= link_to "Show this post", post %>
+[fbe45877-9bbc-4618-8de0-a5b82590f9bd]   
+[fbe45877-9bbc-4618-8de0-a5b82590f9bd] app/views/posts/index.html.erb:6
+W, [2022-10-18T18:44:20.515286 #136405]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-18T18:44:23.258175 #136405]  INFO -- : [3452b50a-865a-4a53-bdda-f5a9a57d0e78] Started GET "/posts" for 176.129.104.228 at 2022-10-18 18:44:23 +0000
+I, [2022-10-18T18:44:23.260102 #136405]  INFO -- : [3452b50a-865a-4a53-bdda-f5a9a57d0e78] Processing by PostsController#index as HTML
+I, [2022-10-18T18:44:23.269465 #136405]  INFO -- : [3452b50a-865a-4a53-bdda-f5a9a57d0e78]   Rendered posts/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1813)
+I, [2022-10-18T18:44:23.269574 #136405]  INFO -- : [3452b50a-865a-4a53-bdda-f5a9a57d0e78]   Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1877)
+I, [2022-10-18T18:44:23.269796 #136405]  INFO -- : [3452b50a-865a-4a53-bdda-f5a9a57d0e78] Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 3405)
+F, [2022-10-18T18:44:23.271090 #136405] FATAL -- : [3452b50a-865a-4a53-bdda-f5a9a57d0e78]   
+[3452b50a-865a-4a53-bdda-f5a9a57d0e78] ActionView::Template::Error (SQLite3::SQLException: no such table: posts):
+[3452b50a-865a-4a53-bdda-f5a9a57d0e78]     3: <h1>Posts</h1>
+[3452b50a-865a-4a53-bdda-f5a9a57d0e78]     4: 
+[3452b50a-865a-4a53-bdda-f5a9a57d0e78]     5: <div id="posts">
+[3452b50a-865a-4a53-bdda-f5a9a57d0e78]     6:   <% @posts.each do |post| %>
+[3452b50a-865a-4a53-bdda-f5a9a57d0e78]     7:     <%= render post %>
+[3452b50a-865a-4a53-bdda-f5a9a57d0e78]     8:     <p>
+[3452b50a-865a-4a53-bdda-f5a9a57d0e78]     9:       <%= link_to "Show this post", post %>
+[3452b50a-865a-4a53-bdda-f5a9a57d0e78]   
+[3452b50a-865a-4a53-bdda-f5a9a57d0e78] app/views/posts/index.html.erb:6
+I, [2022-10-18T18:44:24.118963 #136405]  INFO -- : [9df79be7-71e9-439b-be47-4a13463f4ca2] Started GET "/posts" for 176.129.104.228 at 2022-10-18 18:44:24 +0000
+I, [2022-10-18T18:44:24.119784 #136405]  INFO -- : [9df79be7-71e9-439b-be47-4a13463f4ca2] Processing by PostsController#index as HTML
+I, [2022-10-18T18:44:24.121808 #136405]  INFO -- : [9df79be7-71e9-439b-be47-4a13463f4ca2]   Rendered posts/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 347)
+I, [2022-10-18T18:44:24.121875 #136405]  INFO -- : [9df79be7-71e9-439b-be47-4a13463f4ca2]   Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 379)
+I, [2022-10-18T18:44:24.121997 #136405]  INFO -- : [9df79be7-71e9-439b-be47-4a13463f4ca2] Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.5ms | Allocations: 624)
+F, [2022-10-18T18:44:24.122773 #136405] FATAL -- : [9df79be7-71e9-439b-be47-4a13463f4ca2]   
+[9df79be7-71e9-439b-be47-4a13463f4ca2] ActionView::Template::Error (SQLite3::SQLException: no such table: posts):
+[9df79be7-71e9-439b-be47-4a13463f4ca2]     3: <h1>Posts</h1>
+[9df79be7-71e9-439b-be47-4a13463f4ca2]     4: 
+[9df79be7-71e9-439b-be47-4a13463f4ca2]     5: <div id="posts">
+[9df79be7-71e9-439b-be47-4a13463f4ca2]     6:   <% @posts.each do |post| %>
+[9df79be7-71e9-439b-be47-4a13463f4ca2]     7:     <%= render post %>
+[9df79be7-71e9-439b-be47-4a13463f4ca2]     8:     <p>
+[9df79be7-71e9-439b-be47-4a13463f4ca2]     9:       <%= link_to "Show this post", post %>
+[9df79be7-71e9-439b-be47-4a13463f4ca2]   
+[9df79be7-71e9-439b-be47-4a13463f4ca2] app/views/posts/index.html.erb:6
+I, [2022-10-18T18:44:24.286303 #136405]  INFO -- : [f156dc9c-04ba-4311-84f9-dacee9bcdf41] Started GET "/posts" for 176.129.104.228 at 2022-10-18 18:44:24 +0000
+I, [2022-10-18T18:44:24.287188 #136405]  INFO -- : [f156dc9c-04ba-4311-84f9-dacee9bcdf41] Processing by PostsController#index as HTML
+I, [2022-10-18T18:44:24.289034 #136405]  INFO -- : [f156dc9c-04ba-4311-84f9-dacee9bcdf41]   Rendered posts/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 284)
+I, [2022-10-18T18:44:24.289129 #136405]  INFO -- : [f156dc9c-04ba-4311-84f9-dacee9bcdf41]   Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 314)
+I, [2022-10-18T18:44:24.289296 #136405]  INFO -- : [f156dc9c-04ba-4311-84f9-dacee9bcdf41] Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.5ms | Allocations: 500)
+F, [2022-10-18T18:44:24.292053 #136405] FATAL -- : [f156dc9c-04ba-4311-84f9-dacee9bcdf41]   
+[f156dc9c-04ba-4311-84f9-dacee9bcdf41] ActionView::Template::Error (SQLite3::SQLException: no such table: posts):
+[f156dc9c-04ba-4311-84f9-dacee9bcdf41]     3: <h1>Posts</h1>
+[f156dc9c-04ba-4311-84f9-dacee9bcdf41]     4: 
+[f156dc9c-04ba-4311-84f9-dacee9bcdf41]     5: <div id="posts">
+[f156dc9c-04ba-4311-84f9-dacee9bcdf41]     6:   <% @posts.each do |post| %>
+[f156dc9c-04ba-4311-84f9-dacee9bcdf41]     7:     <%= render post %>
+[f156dc9c-04ba-4311-84f9-dacee9bcdf41]     8:     <p>
+[f156dc9c-04ba-4311-84f9-dacee9bcdf41]     9:       <%= link_to "Show this post", post %>
+[f156dc9c-04ba-4311-84f9-dacee9bcdf41]   
+[f156dc9c-04ba-4311-84f9-dacee9bcdf41] app/views/posts/index.html.erb:6
+W, [2022-10-18T18:45:51.107851 #136436]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-18T18:45:51.144749 #136436]  INFO -- : Migrating to CreatePosts (20221018070316)
+I, [2022-10-18T18:45:51.153136 #136436]  INFO -- : Migrating to CreateActiveStorageTables (20221018072936)
+I, [2022-10-18T18:45:51.160688 #136436]  INFO -- : Migrating to CreateActionTextTables (20221018072937)
+I, [2022-10-18T18:45:51.166027 #136436]  INFO -- : Migrating to CreateComments (20221018074840)
+W, [2022-10-18T18:45:57.577123 #136439]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-18T18:45:59.575299 #136439]  INFO -- : [94e451ad-3780-4e55-8028-e0f67219982f] Started GET "/posts" for 176.129.104.228 at 2022-10-18 18:45:59 +0000
+I, [2022-10-18T18:45:59.577110 #136439]  INFO -- : [94e451ad-3780-4e55-8028-e0f67219982f] Processing by PostsController#index as HTML
+I, [2022-10-18T18:45:59.587080 #136439]  INFO -- : [94e451ad-3780-4e55-8028-e0f67219982f]   Rendered posts/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1850)
+I, [2022-10-18T18:45:59.590659 #136439]  INFO -- : [94e451ad-3780-4e55-8028-e0f67219982f]   Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4349)
+I, [2022-10-18T18:45:59.591505 #136439]  INFO -- : [94e451ad-3780-4e55-8028-e0f67219982f] Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.7ms | Allocations: 5926)
+I, [2022-10-18T18:45:59.613545 #136439]  INFO -- : [f71581fe-6564-4dd3-9596-2de3ad91e4d3] Started GET "/assets/application-d6621387afbaa9aeda81878a0cca16e410cbe7e45f668e6edc1a0d4750fca4e0.css" for 176.129.104.228 at 2022-10-18 18:45:59 +0000
+F, [2022-10-18T18:45:59.614099 #136439] FATAL -- : [f71581fe-6564-4dd3-9596-2de3ad91e4d3]   
+[f71581fe-6564-4dd3-9596-2de3ad91e4d3] ActionController::RoutingError (No route matches [GET] "/assets/application-d6621387afbaa9aeda81878a0cca16e410cbe7e45f668e6edc1a0d4750fca4e0.css"):
+[f71581fe-6564-4dd3-9596-2de3ad91e4d3]   
+I, [2022-10-18T18:45:59.633830 #136439]  INFO -- : [a4bd1d5e-07c7-4751-b13f-76c7259eb779] Started GET "/assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js" for 176.129.104.228 at 2022-10-18 18:45:59 +0000
+F, [2022-10-18T18:45:59.635112 #136439] FATAL -- : [a4bd1d5e-07c7-4751-b13f-76c7259eb779]   
+[a4bd1d5e-07c7-4751-b13f-76c7259eb779] ActionController::RoutingError (No route matches [GET] "/assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js"):
+[a4bd1d5e-07c7-4751-b13f-76c7259eb779]   
+I, [2022-10-18T18:46:31.986433 #136439]  INFO -- : [49bad5f0-05a1-4f20-9761-21a1b0b8c663] Started GET "/posts/new" for 176.129.104.228 at 2022-10-18 18:46:31 +0000
+I, [2022-10-18T18:46:31.987367 #136439]  INFO -- : [49bad5f0-05a1-4f20-9761-21a1b0b8c663] Processing by PostsController#new as HTML
+I, [2022-10-18T18:46:32.012090 #136439]  INFO -- : [49bad5f0-05a1-4f20-9761-21a1b0b8c663]   Rendered posts/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 7242)
+I, [2022-10-18T18:46:32.012813 #136439]  INFO -- : [49bad5f0-05a1-4f20-9761-21a1b0b8c663]   Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 7842)
+I, [2022-10-18T18:46:32.013072 #136439]  INFO -- : [49bad5f0-05a1-4f20-9761-21a1b0b8c663] Completed 200 OK in 26ms (Views: 13.8ms | ActiveRecord: 1.2ms | Allocations: 13128)
+I, [2022-10-18T18:46:40.907193 #136439]  INFO -- : [7b4ec745-65a4-4d75-80a6-bfa4933d0522] Started POST "/posts" for 176.129.104.228 at 2022-10-18 18:46:40 +0000
+I, [2022-10-18T18:46:40.908218 #136439]  INFO -- : [7b4ec745-65a4-4d75-80a6-bfa4933d0522] Processing by PostsController#create as HTML
+I, [2022-10-18T18:46:40.908288 #136439]  INFO -- : [7b4ec745-65a4-4d75-80a6-bfa4933d0522]   Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"test", "content"=>""}, "commit"=>"Create Post"}
+I, [2022-10-18T18:46:40.942999 #136439]  INFO -- : [7b4ec745-65a4-4d75-80a6-bfa4933d0522] Redirected to http://cosmoswide.fr:3000/posts/1
+I, [2022-10-18T18:46:40.943203 #136439]  INFO -- : [7b4ec745-65a4-4d75-80a6-bfa4933d0522] Completed 302 Found in 35ms (ActiveRecord: 3.7ms | Allocations: 4614)
+I, [2022-10-18T18:46:40.981321 #136439]  INFO -- : [2211d322-3773-4e4e-904f-c847dd32e26e] Started GET "/posts/1" for 176.129.104.228 at 2022-10-18 18:46:40 +0000
+I, [2022-10-18T18:46:40.982122 #136439]  INFO -- : [2211d322-3773-4e4e-904f-c847dd32e26e] Processing by PostsController#show as HTML
+I, [2022-10-18T18:46:40.982173 #136439]  INFO -- : [2211d322-3773-4e4e-904f-c847dd32e26e]   Parameters: {"id"=>"1"}
+I, [2022-10-18T18:46:41.043442 #136439]  INFO -- : [2211d322-3773-4e4e-904f-c847dd32e26e]   Rendered posts/show.html.erb within layouts/application (Duration: 48.6ms | Allocations: 6905)
+I, [2022-10-18T18:46:41.044289 #136439]  INFO -- : [2211d322-3773-4e4e-904f-c847dd32e26e]   Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 7465)
+I, [2022-10-18T18:46:41.044517 #136439]  INFO -- : [2211d322-3773-4e4e-904f-c847dd32e26e] Completed 200 OK in 62ms (Views: 48.9ms | ActiveRecord: 1.1ms | Allocations: 8252)
+I, [2022-10-18T18:46:48.824938 #136439]  INFO -- : [8b3385fd-39d6-4ceb-bcf0-8babe975d33f] Started POST "/posts/1/comments" for 176.129.104.228 at 2022-10-18 18:46:48 +0000
+I, [2022-10-18T18:46:48.825967 #136439]  INFO -- : [8b3385fd-39d6-4ceb-bcf0-8babe975d33f] Processing by CommentsController#create as HTML
+I, [2022-10-18T18:46:48.826035 #136439]  INFO -- : [8b3385fd-39d6-4ceb-bcf0-8babe975d33f]   Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"content"=>"No comment."}, "commit"=>"Create Comment", "post_id"=>"1"}
+I, [2022-10-18T18:46:48.834764 #136439]  INFO -- : [8b3385fd-39d6-4ceb-bcf0-8babe975d33f] [ActiveJob] Enqueued Turbo::Streams::ActionBroadcastJob (Job ID: 3bf3edd1-05ec-4911-bec2-1ba90d7d9b5c) to Async(default) with arguments: "Z2lkOi8vYmxvZy9Qb3N0LzE", {:action=>:append, :target=>"comments", :targets=>nil, :locals=>{:comment=>#<GlobalID:0x00007fefaa6176e0 @uri=#<URI::GID gid://blog/Comment/1>>}, :partial=>"comments/comment"}
+I, [2022-10-18T18:46:48.836812 #136439]  INFO -- : [8b3385fd-39d6-4ceb-bcf0-8babe975d33f] [ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: c1e86ae4-e1c8-4f5e-b421-082b5bc4efb7) to Async(default) with arguments: "CommentsMailer", "submitted", "deliver_now", {:args=>[#<GlobalID:0x00007fefaa612bb8 @uri=#<URI::GID gid://blog/Comment/1>>]}
+I, [2022-10-18T18:46:48.837334 #136439]  INFO -- : [8b3385fd-39d6-4ceb-bcf0-8babe975d33f] Redirected to http://cosmoswide.fr:3000/posts/1
+I, [2022-10-18T18:46:48.837468 #136439]  INFO -- : [8b3385fd-39d6-4ceb-bcf0-8babe975d33f] Completed 302 Found in 11ms (ActiveRecord: 3.2ms | Allocations: 2554)
+I, [2022-10-18T18:46:48.841049 #136439]  INFO -- : [ActiveJob] [Turbo::Streams::ActionBroadcastJob] [3bf3edd1-05ec-4911-bec2-1ba90d7d9b5c] Performing Turbo::Streams::ActionBroadcastJob (Job ID: 3bf3edd1-05ec-4911-bec2-1ba90d7d9b5c) from Async(default) enqueued at 2022-10-18T18:46:48Z with arguments: "Z2lkOi8vYmxvZy9Qb3N0LzE", {:action=>:append, :target=>"comments", :targets=>nil, :locals=>{:comment=>#<GlobalID:0x00007fefa81b0608 @uri=#<URI::GID gid://blog/Comment/1>>}, :partial=>"comments/comment"}
+E, [2022-10-18T18:46:48.846807 #136439] ERROR -- : [ActiveJob] [Turbo::Streams::ActionBroadcastJob] [3bf3edd1-05ec-4911-bec2-1ba90d7d9b5c] Error performing Turbo::Streams::ActionBroadcastJob (Job ID: 3bf3edd1-05ec-4911-bec2-1ba90d7d9b5c) from Async(default) in 7.28ms: Gem::LoadError (Error loading the 'redis' Action Cable pubsub adapter. Missing a gem it depends on? redis is not part of the bundle. Add it to your Gemfile.):
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/bundler-2.3.24/lib/bundler/rubygems_integration.rb:280:in `block (2 levels) in replace_gem'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/subscription_adapter/redis.rb:5:in `<main>'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/bootsnap-1.13.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/bootsnap-1.13.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/zeitwerk-2.6.1/lib/zeitwerk/kernel.rb:35:in `require'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/configuration.rb:35:in `pubsub_adapter'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/base.rb:83:in `block in pubsub'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/base.rb:83:in `synchronize'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/base.rb:83:in `pubsub'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/broadcasting.rb:48:in `block in broadcast'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:208:in `instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/broadcasting.rb:46:in `broadcast'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/broadcasting.rb:25:in `broadcast'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/turbo-rails-1.3.1/app/channels/turbo/streams/broadcasts.rb:80:in `broadcast_stream_to'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/turbo-rails-1.3.1/app/channels/turbo/streams/broadcasts.rb:37:in `broadcast_action_to'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/turbo-rails-1.3.1/app/jobs/turbo/streams/action_broadcast_job.rb:6:in `perform'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:59:in `block in _perform_job'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/i18n-1.12.0/lib/i18n.rb:322:in `with_locale'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:58:in `_perform_job'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:46:in `perform_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:35:in `instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `perform_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `block in perform_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:37:in `tagged'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `tagged'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:25:in `tag_logger'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `perform_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:24:in `block in execute'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/reloader.rb:71:in `wrap'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:22:in `execute'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+I, [2022-10-18T18:46:48.849930 #136439]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [c1e86ae4-e1c8-4f5e-b421-082b5bc4efb7] Performing ActionMailer::MailDeliveryJob (Job ID: c1e86ae4-e1c8-4f5e-b421-082b5bc4efb7) from Async(default) enqueued at 2022-10-18T18:46:48Z with arguments: "CommentsMailer", "submitted", "deliver_now", {:args=>[#<GlobalID:0x00007fefa8196cf8 @uri=#<URI::GID gid://blog/Comment/1>>]}
+I, [2022-10-18T18:46:48.856198 #136439]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [c1e86ae4-e1c8-4f5e-b421-082b5bc4efb7]   Rendered comments_mailer/submitted.html.erb within layouts/mailer (Duration: 3.7ms | Allocations: 1198)
+I, [2022-10-18T18:46:48.856894 #136439]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [c1e86ae4-e1c8-4f5e-b421-082b5bc4efb7]   Rendered layout layouts/mailer.html.erb (Duration: 4.4ms | Allocations: 1361)
+I, [2022-10-18T18:46:48.857989 #136439]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [c1e86ae4-e1c8-4f5e-b421-082b5bc4efb7]   Rendered comments_mailer/submitted.text.erb within layouts/mailer (Duration: 0.5ms | Allocations: 109)
+I, [2022-10-18T18:46:48.858594 #136439]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [c1e86ae4-e1c8-4f5e-b421-082b5bc4efb7]   Rendered layout layouts/mailer.text.erb (Duration: 1.1ms | Allocations: 234)
+I, [2022-10-18T18:46:48.864754 #136439]  INFO -- : [434b70a8-221b-4f34-9c99-b668b5e85bd0] Started GET "/posts/1" for 176.129.104.228 at 2022-10-18 18:46:48 +0000
+I, [2022-10-18T18:46:48.865594 #136439]  INFO -- : [434b70a8-221b-4f34-9c99-b668b5e85bd0] Processing by PostsController#show as HTML
+I, [2022-10-18T18:46:48.865644 #136439]  INFO -- : [434b70a8-221b-4f34-9c99-b668b5e85bd0]   Parameters: {"id"=>"1"}
+I, [2022-10-18T18:46:48.874032 #136439]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [c1e86ae4-e1c8-4f5e-b421-082b5bc4efb7] Delivered mail 634ef498d2752_214f75b68185eb@webserv.mail (13.0ms)
+E, [2022-10-18T18:46:48.874290 #136439] ERROR -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [c1e86ae4-e1c8-4f5e-b421-082b5bc4efb7] Error performing ActionMailer::MailDeliveryJob (Job ID: c1e86ae4-e1c8-4f5e-b421-082b5bc4efb7) from Async(default) in 25.66ms: Errno::ECONNREFUSED (Connection refused - connect(2) for 127.0.0.1:25):
+/usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:1214:in `__connect_nonblock'
+/usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:1214:in `connect_nonblock'
+/usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:56:in `connect_internal'
+/usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:137:in `connect'
+/usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:642:in `block in tcp'
+/usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:227:in `each'
+/usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:227:in `foreach'
+/usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:632:in `tcp'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/net-smtp-0.3.2/lib/net/smtp.rb:631:in `tcp_socket'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/net-smtp-0.3.2/lib/net/smtp.rb:644:in `do_start'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/net-smtp-0.3.2/lib/net/smtp.rb:609:in `start'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/base.rb:588:in `block in deliver_mail'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/base.rb:586:in `deliver_mail'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:119:in `block in deliver_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:118:in `deliver_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/mail_delivery_job.rb:23:in `perform'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:59:in `block in _perform_job'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/i18n-1.12.0/lib/i18n.rb:322:in `with_locale'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:58:in `_perform_job'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:46:in `perform_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:35:in `instrument'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `perform_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `block in perform_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:37:in `tagged'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `tagged'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:25:in `tag_logger'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `perform_now'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:24:in `block in execute'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/reloader.rb:71:in `wrap'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:22:in `execute'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/home/cereo/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+I, [2022-10-18T18:46:48.877415 #136439]  INFO -- : [434b70a8-221b-4f34-9c99-b668b5e85bd0]   Rendered posts/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 3321)
+I, [2022-10-18T18:46:48.878488 #136439]  INFO -- : [434b70a8-221b-4f34-9c99-b668b5e85bd0]   Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3878)
+I, [2022-10-18T18:46:48.878758 #136439]  INFO -- : [434b70a8-221b-4f34-9c99-b668b5e85bd0] Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.1ms | Allocations: 4364)
+I, [2022-10-18T18:46:52.473145 #136439]  INFO -- : [1160b0aa-5329-4b1e-9fb3-b6ecd799ae3e] Started DELETE "/posts/1" for 176.129.104.228 at 2022-10-18 18:46:52 +0000
+I, [2022-10-18T18:46:52.474208 #136439]  INFO -- : [1160b0aa-5329-4b1e-9fb3-b6ecd799ae3e] Processing by PostsController#destroy as HTML
+I, [2022-10-18T18:46:52.474734 #136439]  INFO -- : [1160b0aa-5329-4b1e-9fb3-b6ecd799ae3e]   Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+I, [2022-10-18T18:46:52.495891 #136439]  INFO -- : [1160b0aa-5329-4b1e-9fb3-b6ecd799ae3e] Completed 500 Internal Server Error in 21ms (ActiveRecord: 6.6ms | Allocations: 2854)
+F, [2022-10-18T18:46:52.497235 #136439] FATAL -- : [1160b0aa-5329-4b1e-9fb3-b6ecd799ae3e]   
+[1160b0aa-5329-4b1e-9fb3-b6ecd799ae3e] Gem::LoadError (Error loading the 'redis' Action Cable pubsub adapter. Missing a gem it depends on? redis is not part of the bundle. Add it to your Gemfile.):
+[1160b0aa-5329-4b1e-9fb3-b6ecd799ae3e]   
+[1160b0aa-5329-4b1e-9fb3-b6ecd799ae3e] app/controllers/posts_controller.rb:52:in `destroy'
+W, [2022-10-18T18:50:28.736978 #136488]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+W, [2022-10-18T18:50:55.868630 #136499]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-10-18T19:22:38.309873 #137533]  INFO -- : [d0030714-ab91-44f6-a758-b5f3a18b2167] Started GET "/posts/1" for 176.129.104.228 at 2022-10-18 19:22:38 +0000
+I, [2022-10-18T19:22:38.311349 #137533]  INFO -- : [d0030714-ab91-44f6-a758-b5f3a18b2167] Processing by PostsController#show as HTML
+I, [2022-10-18T19:22:38.311413 #137533]  INFO -- : [d0030714-ab91-44f6-a758-b5f3a18b2167]   Parameters: {"id"=>"1"}
+I, [2022-10-18T19:22:38.351652 #137533]  INFO -- : [d0030714-ab91-44f6-a758-b5f3a18b2167] Completed 404 Not Found in 40ms (ActiveRecord: 27.6ms | Allocations: 5829)
+F, [2022-10-18T19:22:38.352154 #137533] FATAL -- : [d0030714-ab91-44f6-a758-b5f3a18b2167]   
+[d0030714-ab91-44f6-a758-b5f3a18b2167] ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1):
+[d0030714-ab91-44f6-a758-b5f3a18b2167]   
+[d0030714-ab91-44f6-a758-b5f3a18b2167] app/controllers/posts_controller.rb:63:in `set_post'
+I, [2022-10-18T19:22:39.537218 #137533]  INFO -- : [27112efb-5c9d-494a-94ee-bc981b9c787f] Started GET "/posts" for 176.129.104.228 at 2022-10-18 19:22:39 +0000
+I, [2022-10-18T19:22:39.538366 #137533]  INFO -- : [27112efb-5c9d-494a-94ee-bc981b9c787f] Processing by PostsController#index as HTML
+I, [2022-10-18T19:22:39.546225 #137533]  INFO -- : [27112efb-5c9d-494a-94ee-bc981b9c787f]   Rendered posts/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1046)
+I, [2022-10-18T19:22:39.579045 #137533]  INFO -- : [27112efb-5c9d-494a-94ee-bc981b9c787f]   Rendered layout layouts/application.html.erb (Duration: 38.1ms | Allocations: 3469)
+I, [2022-10-18T19:22:39.591074 #137533]  INFO -- : [27112efb-5c9d-494a-94ee-bc981b9c787f] Completed 200 OK in 53ms (Views: 39.2ms | ActiveRecord: 0.2ms | Allocations: 4669)
+I, [2022-10-18T19:22:39.645501 #137533]  INFO -- : [25f70ac9-7fe0-45e9-8821-8728c66eb584] Started GET "/assets/application-d6621387afbaa9aeda81878a0cca16e410cbe7e45f668e6edc1a0d4750fca4e0.css" for 176.129.104.228 at 2022-10-18 19:22:39 +0000
+F, [2022-10-18T19:22:39.648185 #137533] FATAL -- : [25f70ac9-7fe0-45e9-8821-8728c66eb584]   
+[25f70ac9-7fe0-45e9-8821-8728c66eb584] ActionController::RoutingError (No route matches [GET] "/assets/application-d6621387afbaa9aeda81878a0cca16e410cbe7e45f668e6edc1a0d4750fca4e0.css"):
+[25f70ac9-7fe0-45e9-8821-8728c66eb584]   
+I, [2022-10-18T19:22:39.646225 #137533]  INFO -- : [a8d0dd87-b658-40f4-b3fa-a5b4bbf8ea11] Started GET "/assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js" for 176.129.104.228 at 2022-10-18 19:22:39 +0000
+F, [2022-10-18T19:22:39.649147 #137533] FATAL -- : [a8d0dd87-b658-40f4-b3fa-a5b4bbf8ea11]   
+[a8d0dd87-b658-40f4-b3fa-a5b4bbf8ea11] ActionController::RoutingError (No route matches [GET] "/assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js"):
+[a8d0dd87-b658-40f4-b3fa-a5b4bbf8ea11]   
+I, [2022-10-18T19:22:40.878857 #137533]  INFO -- : [bc1e7c1e-1450-467e-b57b-c6ac3d6bbb82] Started GET "/posts/new" for 176.129.104.228 at 2022-10-18 19:22:40 +0000
+I, [2022-10-18T19:22:40.880320 #137533]  INFO -- : [bc1e7c1e-1450-467e-b57b-c6ac3d6bbb82] Processing by PostsController#new as HTML
+I, [2022-10-18T19:22:40.901403 #137533]  INFO -- : [bc1e7c1e-1450-467e-b57b-c6ac3d6bbb82]   Rendered posts/new.html.erb within layouts/application (Duration: 16.2ms | Allocations: 7052)
+I, [2022-10-18T19:22:40.902575 #137533]  INFO -- : [bc1e7c1e-1450-467e-b57b-c6ac3d6bbb82]   Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 7647)
+I, [2022-10-18T19:22:40.902871 #137533]  INFO -- : [bc1e7c1e-1450-467e-b57b-c6ac3d6bbb82] Completed 200 OK in 22ms (Views: 15.2ms | ActiveRecord: 2.6ms | Allocations: 10678)
