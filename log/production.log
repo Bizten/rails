@@ -471,3 +471,284 @@ I, [2022-10-18T19:22:40.880320 #137533]  INFO -- : [bc1e7c1e-1450-467e-b57b-c6ac
 I, [2022-10-18T19:22:40.901403 #137533]  INFO -- : [bc1e7c1e-1450-467e-b57b-c6ac3d6bbb82]   Rendered posts/new.html.erb within layouts/application (Duration: 16.2ms | Allocations: 7052)
 I, [2022-10-18T19:22:40.902575 #137533]  INFO -- : [bc1e7c1e-1450-467e-b57b-c6ac3d6bbb82]   Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 7647)
 I, [2022-10-18T19:22:40.902871 #137533]  INFO -- : [bc1e7c1e-1450-467e-b57b-c6ac3d6bbb82] Completed 200 OK in 22ms (Views: 15.2ms | ActiveRecord: 2.6ms | Allocations: 10678)
+I, [2022-10-18T21:37:26.093615 #73187]  INFO -- : [869de030-b72e-42c9-aedd-1cc59193df55] Started GET "/" for 127.0.0.1 at 2022-10-18 21:37:26 +0200
+I, [2022-10-18T21:37:26.095564 #73187]  INFO -- : [869de030-b72e-42c9-aedd-1cc59193df55] Processing by PostsController#index as HTML
+I, [2022-10-18T21:37:26.105634 #73187]  INFO -- : [869de030-b72e-42c9-aedd-1cc59193df55]   Rendered posts/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2460)
+I, [2022-10-18T21:37:26.105772 #73187]  INFO -- : [869de030-b72e-42c9-aedd-1cc59193df55]   Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2527)
+I, [2022-10-18T21:37:26.105950 #73187]  INFO -- : [869de030-b72e-42c9-aedd-1cc59193df55] Completed 500 Internal Server Error in 10ms (Allocations: 4044)
+F, [2022-10-18T21:37:26.115527 #73187] FATAL -- : [869de030-b72e-42c9-aedd-1cc59193df55]   
+[869de030-b72e-42c9-aedd-1cc59193df55] ActionView::Template::Error (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+[869de030-b72e-42c9-aedd-1cc59193df55]     3: <h1>Posts</h1>
+[869de030-b72e-42c9-aedd-1cc59193df55]     4: 
+[869de030-b72e-42c9-aedd-1cc59193df55]     5: <div id="posts">
+[869de030-b72e-42c9-aedd-1cc59193df55]     6:   <% @posts.each do |post| %>
+[869de030-b72e-42c9-aedd-1cc59193df55]     7:     <%= render post %>
+[869de030-b72e-42c9-aedd-1cc59193df55]     8:     <p>
+[869de030-b72e-42c9-aedd-1cc59193df55]     9:       <%= link_to "Show this post", post %>
+[869de030-b72e-42c9-aedd-1cc59193df55]   
+[869de030-b72e-42c9-aedd-1cc59193df55] app/views/posts/index.html.erb:6
+I, [2022-10-18T21:43:50.602485 #75576]  INFO -- : [08bade45-83e1-4a65-bdd5-f697d746570f] Started GET "/" for 127.0.0.1 at 2022-10-18 21:43:50 +0200
+I, [2022-10-18T21:43:50.605587 #75576]  INFO -- : [08bade45-83e1-4a65-bdd5-f697d746570f] Processing by PostsController#index as HTML
+I, [2022-10-18T21:43:50.642057 #75576]  INFO -- : [08bade45-83e1-4a65-bdd5-f697d746570f]   Rendered posts/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 5459)
+I, [2022-10-18T21:43:50.642251 #75576]  INFO -- : [08bade45-83e1-4a65-bdd5-f697d746570f]   Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 5523)
+I, [2022-10-18T21:43:50.642688 #75576]  INFO -- : [08bade45-83e1-4a65-bdd5-f697d746570f] Completed 500 Internal Server Error in 37ms (ActiveRecord: 9.2ms | Allocations: 7050)
+F, [2022-10-18T21:43:50.644234 #75576] FATAL -- : [08bade45-83e1-4a65-bdd5-f697d746570f]   
+[08bade45-83e1-4a65-bdd5-f697d746570f] ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: SELECT "posts".* FROM "posts"
+                              ^
+):
+[08bade45-83e1-4a65-bdd5-f697d746570f]     3: <h1>Posts</h1>
+[08bade45-83e1-4a65-bdd5-f697d746570f]     4: 
+[08bade45-83e1-4a65-bdd5-f697d746570f]     5: <div id="posts">
+[08bade45-83e1-4a65-bdd5-f697d746570f]     6:   <% @posts.each do |post| %>
+[08bade45-83e1-4a65-bdd5-f697d746570f]     7:     <%= render post %>
+[08bade45-83e1-4a65-bdd5-f697d746570f]     8:     <p>
+[08bade45-83e1-4a65-bdd5-f697d746570f]     9:       <%= link_to "Show this post", post %>
+[08bade45-83e1-4a65-bdd5-f697d746570f]   
+[08bade45-83e1-4a65-bdd5-f697d746570f] app/views/posts/index.html.erb:6
+I, [2022-10-18T21:43:51.551489 #75576]  INFO -- : [9394c19c-b311-4e20-b8c3-22a4d96980c9] Started GET "/" for 127.0.0.1 at 2022-10-18 21:43:51 +0200
+I, [2022-10-18T21:43:51.552353 #75576]  INFO -- : [9394c19c-b311-4e20-b8c3-22a4d96980c9] Processing by PostsController#index as HTML
+I, [2022-10-18T21:43:51.555930 #75576]  INFO -- : [9394c19c-b311-4e20-b8c3-22a4d96980c9]   Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1100)
+I, [2022-10-18T21:43:51.556018 #75576]  INFO -- : [9394c19c-b311-4e20-b8c3-22a4d96980c9]   Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1132)
+I, [2022-10-18T21:43:51.556180 #75576]  INFO -- : [9394c19c-b311-4e20-b8c3-22a4d96980c9] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms | Allocations: 1377)
+F, [2022-10-18T21:43:51.557926 #75576] FATAL -- : [9394c19c-b311-4e20-b8c3-22a4d96980c9]   
+[9394c19c-b311-4e20-b8c3-22a4d96980c9] ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: SELECT "posts".* FROM "posts"
+                              ^
+):
+[9394c19c-b311-4e20-b8c3-22a4d96980c9]     3: <h1>Posts</h1>
+[9394c19c-b311-4e20-b8c3-22a4d96980c9]     4: 
+[9394c19c-b311-4e20-b8c3-22a4d96980c9]     5: <div id="posts">
+[9394c19c-b311-4e20-b8c3-22a4d96980c9]     6:   <% @posts.each do |post| %>
+[9394c19c-b311-4e20-b8c3-22a4d96980c9]     7:     <%= render post %>
+[9394c19c-b311-4e20-b8c3-22a4d96980c9]     8:     <p>
+[9394c19c-b311-4e20-b8c3-22a4d96980c9]     9:       <%= link_to "Show this post", post %>
+[9394c19c-b311-4e20-b8c3-22a4d96980c9]   
+[9394c19c-b311-4e20-b8c3-22a4d96980c9] app/views/posts/index.html.erb:6
+I, [2022-10-18T21:46:07.385617 #75601]  INFO -- : [0a935f23-9342-4cc6-8e4c-628bd18663fd] Started GET "/" for 127.0.0.1 at 2022-10-18 21:46:07 +0200
+I, [2022-10-18T21:46:07.387738 #75601]  INFO -- : [0a935f23-9342-4cc6-8e4c-628bd18663fd] Processing by PostsController#index as HTML
+I, [2022-10-18T21:46:07.435516 #75601]  INFO -- : [0a935f23-9342-4cc6-8e4c-628bd18663fd]   Rendered posts/index.html.erb within layouts/application (Duration: 40.3ms | Allocations: 5459)
+I, [2022-10-18T21:46:07.435676 #75601]  INFO -- : [0a935f23-9342-4cc6-8e4c-628bd18663fd]   Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 5523)
+I, [2022-10-18T21:46:07.436069 #75601]  INFO -- : [0a935f23-9342-4cc6-8e4c-628bd18663fd] Completed 500 Internal Server Error in 48ms (ActiveRecord: 9.1ms | Allocations: 7051)
+F, [2022-10-18T21:46:07.437545 #75601] FATAL -- : [0a935f23-9342-4cc6-8e4c-628bd18663fd]   
+[0a935f23-9342-4cc6-8e4c-628bd18663fd] ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: SELECT "posts".* FROM "posts"
+                              ^
+):
+[0a935f23-9342-4cc6-8e4c-628bd18663fd]     3: <h1>Posts</h1>
+[0a935f23-9342-4cc6-8e4c-628bd18663fd]     4: 
+[0a935f23-9342-4cc6-8e4c-628bd18663fd]     5: <div id="posts">
+[0a935f23-9342-4cc6-8e4c-628bd18663fd]     6:   <% @posts.each do |post| %>
+[0a935f23-9342-4cc6-8e4c-628bd18663fd]     7:     <%= render post %>
+[0a935f23-9342-4cc6-8e4c-628bd18663fd]     8:     <p>
+[0a935f23-9342-4cc6-8e4c-628bd18663fd]     9:       <%= link_to "Show this post", post %>
+[0a935f23-9342-4cc6-8e4c-628bd18663fd]   
+[0a935f23-9342-4cc6-8e4c-628bd18663fd] app/views/posts/index.html.erb:6
+I, [2022-10-18T21:46:08.231309 #75601]  INFO -- : [2880c8ba-75eb-4a2e-9966-ae348bea71e8] Started GET "/" for 127.0.0.1 at 2022-10-18 21:46:08 +0200
+I, [2022-10-18T21:46:08.232265 #75601]  INFO -- : [2880c8ba-75eb-4a2e-9966-ae348bea71e8] Processing by PostsController#index as HTML
+I, [2022-10-18T21:46:08.236969 #75601]  INFO -- : [2880c8ba-75eb-4a2e-9966-ae348bea71e8]   Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1100)
+I, [2022-10-18T21:46:08.237126 #75601]  INFO -- : [2880c8ba-75eb-4a2e-9966-ae348bea71e8]   Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1132)
+I, [2022-10-18T21:46:08.237383 #75601]  INFO -- : [2880c8ba-75eb-4a2e-9966-ae348bea71e8] Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.9ms | Allocations: 1377)
+F, [2022-10-18T21:46:08.239647 #75601] FATAL -- : [2880c8ba-75eb-4a2e-9966-ae348bea71e8]   
+[2880c8ba-75eb-4a2e-9966-ae348bea71e8] ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: SELECT "posts".* FROM "posts"
+                              ^
+):
+[2880c8ba-75eb-4a2e-9966-ae348bea71e8]     3: <h1>Posts</h1>
+[2880c8ba-75eb-4a2e-9966-ae348bea71e8]     4: 
+[2880c8ba-75eb-4a2e-9966-ae348bea71e8]     5: <div id="posts">
+[2880c8ba-75eb-4a2e-9966-ae348bea71e8]     6:   <% @posts.each do |post| %>
+[2880c8ba-75eb-4a2e-9966-ae348bea71e8]     7:     <%= render post %>
+[2880c8ba-75eb-4a2e-9966-ae348bea71e8]     8:     <p>
+[2880c8ba-75eb-4a2e-9966-ae348bea71e8]     9:       <%= link_to "Show this post", post %>
+[2880c8ba-75eb-4a2e-9966-ae348bea71e8]   
+[2880c8ba-75eb-4a2e-9966-ae348bea71e8] app/views/posts/index.html.erb:6
+I, [2022-10-18T21:53:58.372047 #75744]  INFO -- : [dc491d4b-33af-452c-b9b1-12a84e837396] Started GET "/posts/new" for 127.0.0.1 at 2022-10-18 21:53:58 +0200
+I, [2022-10-18T21:53:58.375385 #75744]  INFO -- : [dc491d4b-33af-452c-b9b1-12a84e837396] Processing by PostsController#new as HTML
+I, [2022-10-18T21:53:58.448519 #75744]  INFO -- : [dc491d4b-33af-452c-b9b1-12a84e837396]   Rendered posts/new.html.erb within layouts/application (Duration: 25.9ms | Allocations: 8453)
+I, [2022-10-18T21:53:58.451939 #75744]  INFO -- : [dc491d4b-33af-452c-b9b1-12a84e837396]   Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 10950)
+I, [2022-10-18T21:53:58.452269 #75744]  INFO -- : [dc491d4b-33af-452c-b9b1-12a84e837396] Completed 200 OK in 76ms (Views: 28.7ms | ActiveRecord: 20.4ms | Allocations: 19508)
+I, [2022-10-18T21:58:43.013692 #75800]  INFO -- : [b88aec49-db23-4e72-90a5-2533822995cf] Started GET "/posts" for 127.0.0.1 at 2022-10-18 21:58:43 +0200
+I, [2022-10-18T21:58:43.016292 #75800]  INFO -- : [b88aec49-db23-4e72-90a5-2533822995cf] Processing by PostsController#index as HTML
+I, [2022-10-18T21:58:43.047643 #75800]  INFO -- : [b88aec49-db23-4e72-90a5-2533822995cf]   Rendered posts/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 4935)
+I, [2022-10-18T21:58:43.052860 #75800]  INFO -- : [b88aec49-db23-4e72-90a5-2533822995cf]   Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 7491)
+I, [2022-10-18T21:58:43.053267 #75800]  INFO -- : [b88aec49-db23-4e72-90a5-2533822995cf] Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 8.9ms | Allocations: 9066)
+I, [2022-10-18T21:58:45.019194 #75800]  INFO -- : [b09974bc-d872-4687-9908-8ae16379be1a] Started GET "/posts/new" for 127.0.0.1 at 2022-10-18 21:58:45 +0200
+I, [2022-10-18T21:58:45.020105 #75800]  INFO -- : [b09974bc-d872-4687-9908-8ae16379be1a] Processing by PostsController#new as HTML
+I, [2022-10-18T21:58:45.062104 #75800]  INFO -- : [b09974bc-d872-4687-9908-8ae16379be1a]   Rendered posts/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 7091)
+I, [2022-10-18T21:58:45.063369 #75800]  INFO -- : [b09974bc-d872-4687-9908-8ae16379be1a]   Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 7682)
+I, [2022-10-18T21:58:45.063644 #75800]  INFO -- : [b09974bc-d872-4687-9908-8ae16379be1a] Completed 200 OK in 43ms (Views: 21.0ms | ActiveRecord: 11.9ms | Allocations: 11509)
+I, [2022-10-18T21:58:48.856783 #75800]  INFO -- : [520f6e0f-45ec-44da-8132-23a940850a0d] Started POST "/posts" for 127.0.0.1 at 2022-10-18 21:58:48 +0200
+I, [2022-10-18T21:58:48.858232 #75800]  INFO -- : [520f6e0f-45ec-44da-8132-23a940850a0d] Processing by PostsController#create as HTML
+I, [2022-10-18T21:58:48.858332 #75800]  INFO -- : [520f6e0f-45ec-44da-8132-23a940850a0d]   Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"test echoué", "content"=>""}, "commit"=>"Create Post"}
+I, [2022-10-18T21:58:48.874400 #75800]  INFO -- : [520f6e0f-45ec-44da-8132-23a940850a0d] Redirected to http://localhost:3000/posts/1
+I, [2022-10-18T21:58:48.874574 #75800]  INFO -- : [520f6e0f-45ec-44da-8132-23a940850a0d] Completed 302 Found in 16ms (ActiveRecord: 3.6ms | Allocations: 4471)
+I, [2022-10-18T21:58:48.880430 #75800]  INFO -- : [a7492e9b-a621-40ff-8401-635eadf6a8ec] Started GET "/posts/1" for 127.0.0.1 at 2022-10-18 21:58:48 +0200
+I, [2022-10-18T21:58:48.881345 #75800]  INFO -- : [a7492e9b-a621-40ff-8401-635eadf6a8ec] Processing by PostsController#show as HTML
+I, [2022-10-18T21:58:48.881409 #75800]  INFO -- : [a7492e9b-a621-40ff-8401-635eadf6a8ec]   Parameters: {"id"=>"1"}
+I, [2022-10-18T21:58:48.929199 #75800]  INFO -- : [a7492e9b-a621-40ff-8401-635eadf6a8ec]   Rendered posts/show.html.erb within layouts/application (Duration: 44.2ms | Allocations: 6828)
+I, [2022-10-18T21:58:48.929705 #75800]  INFO -- : [a7492e9b-a621-40ff-8401-635eadf6a8ec]   Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 7391)
+I, [2022-10-18T21:58:48.929859 #75800]  INFO -- : [a7492e9b-a621-40ff-8401-635eadf6a8ec] Completed 200 OK in 48ms (Views: 39.9ms | ActiveRecord: 5.8ms | Allocations: 8215)
+I, [2022-10-18T21:59:03.206561 #75800]  INFO -- : [e18c247d-bd69-4342-8728-e172d4b0ba1a] Started POST "/posts/1/comments" for 127.0.0.1 at 2022-10-18 21:59:03 +0200
+I, [2022-10-18T21:59:03.207631 #75800]  INFO -- : [e18c247d-bd69-4342-8728-e172d4b0ba1a] Processing by CommentsController#create as HTML
+I, [2022-10-18T21:59:03.207686 #75800]  INFO -- : [e18c247d-bd69-4342-8728-e172d4b0ba1a]   Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"content"=>"au commentaire car le test a échoué"}, "commit"=>"Create Comment", "post_id"=>"1"}
+I, [2022-10-18T21:59:03.219312 #75800]  INFO -- : [e18c247d-bd69-4342-8728-e172d4b0ba1a] [ActiveJob] Enqueued Turbo::Streams::ActionBroadcastJob (Job ID: 54188ac8-364f-44ab-a4ce-e4d9a7c94310) to Async(default) with arguments: "Z2lkOi8vYmxvZy9Qb3N0LzE", {:action=>:append, :target=>"comments", :targets=>nil, :locals=>{:comment=>#<GlobalID:0x000000010780b418 @uri=#<URI::GID gid://blog/Comment/1>>}, :partial=>"comments/comment"}
+I, [2022-10-18T21:59:03.226379 #75800]  INFO -- : [e18c247d-bd69-4342-8728-e172d4b0ba1a] [ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 4ce70f66-ad14-4927-ace7-788d2c1e54cb) to Async(default) with arguments: "CommentsMailer", "submitted", "deliver_now", {:args=>[#<GlobalID:0x000000010799a130 @uri=#<URI::GID gid://blog/Comment/1>>]}
+I, [2022-10-18T21:59:03.228062 #75800]  INFO -- : [e18c247d-bd69-4342-8728-e172d4b0ba1a] Redirected to http://localhost:3000/posts/1
+I, [2022-10-18T21:59:03.228357 #75800]  INFO -- : [e18c247d-bd69-4342-8728-e172d4b0ba1a] Completed 302 Found in 21ms (ActiveRecord: 3.0ms | Allocations: 5085)
+I, [2022-10-18T21:59:03.236757 #75800]  INFO -- : [9e31a809-fc83-42f6-95aa-a568c59d32b4] Started GET "/posts/1" for 127.0.0.1 at 2022-10-18 21:59:03 +0200
+I, [2022-10-18T21:59:03.238115 #75800]  INFO -- : [9e31a809-fc83-42f6-95aa-a568c59d32b4] Processing by PostsController#show as HTML
+I, [2022-10-18T21:59:03.238509 #75800]  INFO -- : [9e31a809-fc83-42f6-95aa-a568c59d32b4]   Parameters: {"id"=>"1"}
+I, [2022-10-18T21:59:03.250976 #75800]  INFO -- : [ActiveJob] [Turbo::Streams::ActionBroadcastJob] [54188ac8-364f-44ab-a4ce-e4d9a7c94310] Performing Turbo::Streams::ActionBroadcastJob (Job ID: 54188ac8-364f-44ab-a4ce-e4d9a7c94310) from Async(default) enqueued at 2022-10-18T19:59:03Z with arguments: "Z2lkOi8vYmxvZy9Qb3N0LzE", {:action=>:append, :target=>"comments", :targets=>nil, :locals=>{:comment=>#<GlobalID:0x0000000107dc59f8 @uri=#<URI::GID gid://blog/Comment/1>>}, :partial=>"comments/comment"}
+I, [2022-10-18T21:59:03.252578 #75800]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [4ce70f66-ad14-4927-ace7-788d2c1e54cb] Performing ActionMailer::MailDeliveryJob (Job ID: 4ce70f66-ad14-4927-ace7-788d2c1e54cb) from Async(default) enqueued at 2022-10-18T19:59:03Z with arguments: "CommentsMailer", "submitted", "deliver_now", {:args=>[#<GlobalID:0x0000000107d461a8 @uri=#<URI::GID gid://blog/Comment/1>>]}
+I, [2022-10-18T21:59:03.254797 #75800]  INFO -- : [9e31a809-fc83-42f6-95aa-a568c59d32b4]   Rendered posts/show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 4926)
+I, [2022-10-18T21:59:03.260103 #75800]  INFO -- : [9e31a809-fc83-42f6-95aa-a568c59d32b4]   Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 7360)
+E, [2022-10-18T21:59:03.259538 #75800] ERROR -- : [ActiveJob] [Turbo::Streams::ActionBroadcastJob] [54188ac8-364f-44ab-a4ce-e4d9a7c94310] Error performing Turbo::Streams::ActionBroadcastJob (Job ID: 54188ac8-364f-44ab-a4ce-e4d9a7c94310) from Async(default) in 39.53ms: Gem::LoadError (Error loading the 'redis' Action Cable pubsub adapter. Missing a gem it depends on? redis is not part of the bundle. Add it to your Gemfile.):
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/bundler-2.3.24/lib/bundler/rubygems_integration.rb:280:in `block (2 levels) in replace_gem'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/subscription_adapter/redis.rb:5:in `<main>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/bootsnap-1.13.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/bootsnap-1.13.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/zeitwerk-2.6.1/lib/zeitwerk/kernel.rb:35:in `require'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/configuration.rb:35:in `pubsub_adapter'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/base.rb:83:in `block in pubsub'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/base.rb:83:in `synchronize'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/base.rb:83:in `pubsub'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/broadcasting.rb:48:in `block in broadcast'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:208:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/broadcasting.rb:46:in `broadcast'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actioncable-7.0.4/lib/action_cable/server/broadcasting.rb:25:in `broadcast'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/turbo-rails-1.3.1/app/channels/turbo/streams/broadcasts.rb:80:in `broadcast_stream_to'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/turbo-rails-1.3.1/app/channels/turbo/streams/broadcasts.rb:37:in `broadcast_action_to'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/turbo-rails-1.3.1/app/jobs/turbo/streams/action_broadcast_job.rb:6:in `perform'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:59:in `block in _perform_job'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/i18n-1.12.0/lib/i18n.rb:322:in `with_locale'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:58:in `_perform_job'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:46:in `perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:35:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `block in perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:37:in `tagged'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `tagged'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:25:in `tag_logger'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:24:in `block in execute'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/reloader.rb:71:in `wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:22:in `execute'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+I, [2022-10-18T21:59:03.260348 #75800]  INFO -- : [9e31a809-fc83-42f6-95aa-a568c59d32b4] Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 2.5ms | Allocations: 8634)
+I, [2022-10-18T21:59:03.266081 #75800]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [4ce70f66-ad14-4927-ace7-788d2c1e54cb]   Rendered comments_mailer/submitted.html.erb within layouts/mailer (Duration: 3.8ms | Allocations: 1286)
+I, [2022-10-18T21:59:03.266411 #75800]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [4ce70f66-ad14-4927-ace7-788d2c1e54cb]   Rendered layout layouts/mailer.html.erb (Duration: 4.1ms | Allocations: 1447)
+I, [2022-10-18T21:59:03.266974 #75800]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [4ce70f66-ad14-4927-ace7-788d2c1e54cb]   Rendered comments_mailer/submitted.text.erb within layouts/mailer (Duration: 0.3ms | Allocations: 109)
+I, [2022-10-18T21:59:03.267264 #75800]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [4ce70f66-ad14-4927-ace7-788d2c1e54cb]   Rendered layout layouts/mailer.text.erb (Duration: 0.6ms | Allocations: 234)
+I, [2022-10-18T21:59:03.276044 #75800]  INFO -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [4ce70f66-ad14-4927-ace7-788d2c1e54cb] Delivered mail 634f0587421f4_128185c303698d@Mini-de-David-001.lan.mail (6.5ms)
+E, [2022-10-18T21:59:03.276402 #75800] ERROR -- : [ActiveJob] [ActionMailer::MailDeliveryJob] [4ce70f66-ad14-4927-ace7-788d2c1e54cb] Error performing ActionMailer::MailDeliveryJob (Job ID: 4ce70f66-ad14-4927-ace7-788d2c1e54cb) from Async(default) in 49.59ms: Errno::ECONNREFUSED (Connection refused - connect(2) for 127.0.0.1:25):
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:1214:in `__connect_nonblock'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:1214:in `connect_nonblock'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:56:in `connect_internal'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:137:in `connect'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:642:in `block in tcp'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:227:in `each'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:227:in `foreach'
+/Users/davidstern/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0/socket.rb:632:in `tcp'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/net-smtp-0.3.2/lib/net/smtp.rb:631:in `tcp_socket'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/net-smtp-0.3.2/lib/net/smtp.rb:644:in `do_start'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/net-smtp-0.3.2/lib/net/smtp.rb:609:in `start'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/base.rb:588:in `block in deliver_mail'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/base.rb:586:in `deliver_mail'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:119:in `block in deliver_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:118:in `deliver_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/actionmailer-7.0.4/lib/action_mailer/mail_delivery_job.rb:23:in `perform'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:59:in `block in _perform_job'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/i18n-1.12.0/lib/i18n.rb:322:in `with_locale'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:58:in `_perform_job'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:46:in `perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:35:in `instrument'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `block in perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:37:in `tagged'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `tagged'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:25:in `tag_logger'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `perform_now'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:24:in `block in execute'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/reloader.rb:71:in `wrap'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/execution.rb:22:in `execute'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/activejob-7.0.4/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/Users/davidstern/.rvm/gems/ruby-3.1.2/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+I, [2022-10-18T21:59:05.012222 #75800]  INFO -- : [d7e7aab9-a553-4791-8c0d-e491d9a5919b] Started GET "/posts/1/edit" for 127.0.0.1 at 2022-10-18 21:59:05 +0200
+I, [2022-10-18T21:59:05.013111 #75800]  INFO -- : [d7e7aab9-a553-4791-8c0d-e491d9a5919b] Processing by PostsController#edit as HTML
+I, [2022-10-18T21:59:05.013154 #75800]  INFO -- : [d7e7aab9-a553-4791-8c0d-e491d9a5919b]   Parameters: {"id"=>"1"}
+I, [2022-10-18T21:59:05.025141 #75800]  INFO -- : [d7e7aab9-a553-4791-8c0d-e491d9a5919b]   Rendered posts/edit.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2223)
+I, [2022-10-18T21:59:05.026406 #75800]  INFO -- : [d7e7aab9-a553-4791-8c0d-e491d9a5919b]   Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2782)
+I, [2022-10-18T21:59:05.026759 #75800]  INFO -- : [d7e7aab9-a553-4791-8c0d-e491d9a5919b] Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.9ms | Allocations: 3177)
