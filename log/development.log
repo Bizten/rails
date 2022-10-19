@@ -2855,3 +2855,14 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 16ms (Views: 5.7ms | ActiveRecord: 4.8ms | Allocations: 15572)
 
 
+Started GET "/posts/new" for ::1 at 2022-10-19 11:26:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.2ms | Allocations: 3521)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 4140)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 6309)
+Completed 200 OK in 19ms (Views: 5.7ms | ActiveRecord: 7.0ms | Allocations: 15579)
+
+
